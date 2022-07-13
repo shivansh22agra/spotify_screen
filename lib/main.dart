@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:spotify_screen/Screen.dart';
+import 'package:spotify_screen/screens/Screen.dart';
+import 'package:spotify_screen/screens/screens_try.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Screen(),
+      debugShowCheckedModeBanner: false,
+   initialRoute: Screen.id,
+      routes: {
+        Screen.id:(context) => Screen(),
+        Screen_try.id:(context)=>Screen_try()
+      },
       
     );
   }
